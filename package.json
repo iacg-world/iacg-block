@@ -1,0 +1,40 @@
+{
+  "name": "iacg-ui",
+  "version": "1.0.0",
+  "description": "基于Vue3 + TypeScript 的 iacg ui 组件库",
+  "main": "dist/iacg.iacg-ui.js",
+  "scripts": {
+    "dev": "rollup -wc ./build/rollup.config.js",
+    "build": "eslint ./src && rollup -c ./build/rollup.config.js",
+    "lint": "eslint ./src"
+  },
+  "author": "sam <247765564@qq.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@types/lodash-es": "^4.17.6",
+    "@vue/compiler-sfc": "^3.2.36",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint": "^8.16.0",
+    "eslint-plugin-vue": "^9.0.1",
+    "rollup": "^2.75.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.52.1",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "core-js": "^3.22.7",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.2.36"
+  }
+}

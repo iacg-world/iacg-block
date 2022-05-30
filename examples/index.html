@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iacg vue3 component example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0/dist/vue.global.js"></script>
+    <script src="../dist/iacg.iacg-ui.umd.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{message}}
+      <iacg-ui></iacg-ui>
+    </div>
+    <script>
+      Vue.createApp({
+        setup() {
+          var message = 'hello iacg!'
+          return {
+            message
+          }
+        }
+      }).use(IacgUi).mount('#app')
+    </script>
+  </body>
+</html>
