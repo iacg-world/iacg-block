@@ -1,21 +1,35 @@
 {
   "name": "iacg-block",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于Vue3 + TypeScript 的 iacg ui组件库",
   "main": "dist/iacg-block.umd.js",
   "module": "dist/iacg-block.esm.js",
   "types": "dist/index.d.ts",
   "private": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "lc <1033581609@qq.com>",
   "license": "ISC",
+  "keywords": [
+    "Component",
+    "UI",
+    "Vue3",
+    "TS"
+  ],
+  "homepage": "https://github.com/iacg-world/iacg-block",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iacg-world/iacg-block"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
     "lint": "vue-cli-service lint",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -50,7 +64,9 @@
   },
   "dependencies": {
     "core-js": "^3.22.7",
-    "lodash-es": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  },
+  "peerDependencies": {
     "vue": "^3.2.36"
   }
 }
