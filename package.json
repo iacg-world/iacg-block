@@ -1,8 +1,8 @@
 {
-  "name": "iacg-ui",
+  "name": "iacg-block",
   "version": "1.0.0",
-  "description": "基于Vue3 + TypeScript 的 iacg ui 组件库",
-  "main": "dist/iacg.iacg-ui.js",
+  "description": "基于Vue3 + TypeScript 的 iacg ui组件库",
+  "main": "dist/iacg.iacg-block.js",
   "scripts": {
     "dev": "rollup -wc ./build/rollup.config.js",
     "build": "eslint ./src && rollup -c ./build/rollup.config.js",
