@@ -1,5 +1,5 @@
 <template>
-  <h1>iacgUI组件库</h1>
+  <h1>iacgBlock组件库</h1>
   <ul>
     <li>开箱即用</li>
     <li>typescript</li>

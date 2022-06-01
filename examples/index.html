@@ -3,12 +3,12 @@
   <head>
     <title>iacg vue3 component example</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0/dist/vue.global.js"></script>
-    <script src="../dist/iacg.iacg-ui.umd.js"></script>
+    <script src="../dist/iacg.iacg-block.umd.js"></script>
   </head>
   <body>
     <div id="app">
       {{message}}
-      <iacg-ui></iacg-ui>
+      <iacg-block></iacg-block>
     </div>
     <script>
       Vue.createApp({
@@ -18,7 +18,7 @@
             message
           }
         }
-      }).use(IacgUi).mount('#app')
+      }).use(IAcgBlock).mount('#app')
     </script>
   </body>
 </html>
