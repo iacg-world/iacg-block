@@ -1,20 +1,24 @@
 <template>
   <div
+    @click.prevent="handleClick"
     :style="styleProps"
     class="c-shape-component"
-    @click.prevent="handleClick"
+    :draggable="false"
   ></div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
-import useComponentCommon from '../../hooks/useComponentCommon'
+import useStylePick from '../../hooks/useStylePick'
+import useComponentClick from '../../hooks/useComponentClick'
 import {
+  componentsDefaultProps,
   transformToComponentProps,
-  shapeDefaultProps,
-  shapeStylePropsNames,
+  isEditingProp,
 } from '../../defaultProps'
-const defaultProps = transformToComponentProps(shapeDefaultProps)
-
+const defaultProps = transformToComponentProps(
+  componentsDefaultProps['c-shape'].props,
+  isEditingProp
+)
 // array that contains style props
 export default defineComponent({
   name: 'c-shape',
@@ -22,12 +26,9 @@ export default defineComponent({
     ...defaultProps,
   },
   setup(props) {
-    // 重用并且简化
-    // 抽离并且获得 styleProps
-    const { styleProps, handleClick } = useComponentCommon(
-      props,
-      shapeStylePropsNames,
-    )
+    const styleProps = useStylePick(props)
+    const handleClick = useComponentClick(props)
+
     return {
       styleProps,
       handleClick,

@@ -1,34 +1,33 @@
 <template>
   <img
+    :src="imageSrc"
     :style="styleProps"
-    class="c-image-component"
     @click.prevent="handleClick"
-    :src="src"
+    class="c-image-component"
+    :draggable="false"
   />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
-import useComponentCommon from '../../hooks/useComponentCommon'
+import useStylePick from '../../hooks/useStylePick'
+import useComponentClick from '../../hooks/useComponentClick'
 import {
+  componentsDefaultProps,
   transformToComponentProps,
-  imageDefaultProps,
-  imageStylePropsNames,
+  isEditingProp,
 } from '../../defaultProps'
-const defaultProps = transformToComponentProps(imageDefaultProps)
 
 // array that contains style props
 export default defineComponent({
   name: 'c-image',
-  props: {
-    ...defaultProps,
-  },
+  props: transformToComponentProps(
+    componentsDefaultProps['c-image'].props,
+    isEditingProp
+  ),
   setup(props) {
-    // 重用并且简化
-    // 抽离并且获得 styleProps
-    const { styleProps, handleClick } = useComponentCommon(
-      props,
-      imageStylePropsNames,
-    )
+    const styleProps = useStylePick(props)
+    const handleClick = useComponentClick(props)
+
     return {
       styleProps,
       handleClick,
@@ -40,6 +39,5 @@ export default defineComponent({
 <style scoped>
 .c-image-component {
   max-width: 100%;
-  position: relative !important;
 }
 </style>

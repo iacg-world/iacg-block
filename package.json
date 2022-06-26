@@ -1,6 +1,6 @@
 {
   "name": "iacg-block",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "基于Vue3 + TypeScript 的 iacg ui组件库",
   "main": "dist/iacg-block.umd.js",
   "module": "dist/iacg-block.esm.js",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "author": "lc <1033581609@qq.com>",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "Component",
     "UI",
@@ -35,6 +35,7 @@
     "@babel/core": "^7.18.2",
     "@babel/plugin-transform-runtime": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
+    "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/lodash-es": "^4.17.6",
@@ -53,6 +54,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-exclude-dependencies-from-bundle": "^1.1.22",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^4.0.2",
@@ -64,7 +66,8 @@
   },
   "dependencies": {
     "core-js": "^3.22.7",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "vue": "^3.2.36"
   },
   "peerDependencies": {
     "vue": "^3.2.36"
