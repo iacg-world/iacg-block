@@ -1,23 +1,23 @@
 <template>
-  <finac-page
+  <final-page
     :components="testData.components"
     :page="testData.page"
-  ></finac-page>
+  ></final-page>
 </template>
 
 <script lang="ts">
 /* eslint-disable vue/no-unused-components */
 import { defineComponent } from 'vue'
-import CText from './components/CText/CText.vue'
-import CImage from './components/CImage/CImage.vue'
-import CShape from './components/CShape/CShape.vue'
+import LText from './components/LText/LText.vue'
+import LImage from './components/LImage/LImage.vue'
+import LShape from './components/LShape/LShape.vue'
 import FinalPage from './components/FinalPage/FinalPage.vue'
 export default defineComponent({
   name: 'App',
   components: {
-    CText,
-    CImage,
-    CShape,
+    LText,
+    LImage,
+    LShape,
     FinalPage,
   },
   setup() {
